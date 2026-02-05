@@ -1,50 +1,131 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Wind Noise Removal – Audio Samples</title>
+
+  <style>
+    :root { color-scheme: light; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      margin: 28px;
+      color: #111;
+      background: #fff;
+    }
+    h1 { margin: 0 0 6px; font-size: 34px; }
+    .subtitle { margin: 0 0 18px; color: #555; line-height: 1.35; }
+    .note { margin: 0 0 18px; color: #666; font-size: 14px; }
+    .wrap { max-width: 1200px; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      vertical-align: middle;
+      text-align: center;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    th {
+      background: #f6f6f6;
+      font-weight: 600;
+      position: sticky;
+      top: 0;
+      z-index: 1;
+    }
+    td.sample {
+      text-align: left;
+      font-weight: 600;
+      white-space: normal;
+    }
+    audio { width: 220px; }
+
+    @media (max-width: 980px) {
+      audio { width: 180px; }
+      th, td { padding: 8px; }
+    }
+    @media (max-width: 720px) {
+      body { margin: 16px; }
+      table { display: block; overflow-x: auto; }
+      audio { width: 160px; }
+    }
+  </style>
 </head>
+
 <body>
+  <div class="wrap">
+    <h1>Wind Noise Removal – Audio Samples</h1>
+    <p class="subtitle">
+      Audio examples accompanying the paper: <b>TITLE OF YOUR PAPER</b>.
+      Each row shows the same utterance across conditions.
+    </p>
+    <p class="note">
+      Folder assumption (recommended):<br>
+      <code>samples/noisy/</code>, <code>samples/clean/</code>, <code>samples/denoised_mymodel/</code>, <code>samples/denoised_baseline/</code><br>
+      Filenames must match exactly (case-sensitive on GitHub Pages).
+    </p>
 
-<h1>Wind Noise Removal – Audio Samples</h1>
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 16%;">Sample</th>
+          <th style="width: 21%;">Noisy</th>
+          <th style="width: 21%;">Clean</th>
+          <th style="width: 21%;">Denoised (MyModel)</th>
+          <th style="width: 21%;">Denoised (Baseline)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- EDIT THESE ROWS: keep the IDs, change paths if your folders/names differ -->
 
-<p>
-Noisy speech samples accompanying the paper:
-<b>“TITLE OF YOUR PAPER”</b>.
-</p>
+        <tr>
+          <td class="sample">Sample 0045</td>
+          <td><audio controls preload="none" src="samples/noisy/0045.wav"></audio></td>
+          <td><audio controls preload="none" src="samples/clean/0045.wav"></audio></td>
+          <td><audio controls preload="none" src="samples/denoised_mymodel/0045.wav"></audio></td>
+          <td><audio controls preload="none" src="samples/denoised_baseline/0045.wav"></audio></td>
+        </tr>
 
-<hr>
+        <tr>
+          <td class="sample">Sample 1420</td>
+          <td><audio controls preload="none" src="samples/noisy/1420.wav"></audio></td>
+          <td><audio controls preload="none" src="samples/clean/1420.wav"></audio></td>
+          <td><audio controls preload="none" src="samples/denoised_mymodel/1420.wav"></audio></td>
+          <td><audio controls preload="none" src="samples/denoised_baseline/1420.wav"></audio></td>
+        </tr>
 
-<h3>Sample 0045 – Noisy</h3>
-<audio controls>
-  <source src="./Audio/sample0045NOISY.wav" type="audio/wav">
-</audio>
+        <tr>
+          <td class="sample">Sample 2492</td>
+          <td><audio controls preload="none" src="samples/noisy/2492.wav"></audio></td>
+          <td><audio controls preload="none" src="samples/clean/2492.wav"></audio></td>
+          <td><audio controls preload="none" src="samples/denoised_mymodel/2492.wav"></audio></td>
+          <td><audio controls preload="none" src="samples/denoised_baseline/2492.wav"></audio></td>
+        </tr>
 
-<h3>Sample 1420 – Noisy</h3>
-<audio controls>
-  <source src="Audio/sample1420NOISY.wav" type="audio/wav">
-</audio>
+        <tr>
+          <td class="sample">Sample 27003</td>
+          <td><audio controls preload="none" src="samples/noisy/27003.wav"></audio></td>
+          <td><audio controls preload="none" src="samples/clean/27003.wav"></audio></td>
+          <td><audio controls preload="none" src="samples/denoised_mymodel/27003.wav"></audio></td>
+          <td><audio controls preload="none" src="samples/denoised_baseline/27003.wav"></audio></td>
+        </tr>
 
-<h3>Sample 2492 – Noisy</h3>
-<audio controls>
-  <source src="Audio/sample2492NOISY.wav" type="audio/wav">
-</audio>
+        <tr>
+          <td class="sample">Sample 6032</td>
+          <td><audio controls preload="none" src="samples/noisy/6032.wav"></audio></td>
+          <td><audio controls preload="none" src="samples/clean/6032.wav"></audio></td>
+          <td><audio controls preload="none" src="samples/denoised_mymodel/6032.wav"></audio></td>
+          <td><audio controls preload="none" src="samples/denoised_baseline/6032.wav"></audio></td>
+        </tr>
 
-<h3>Sample 27003 – Noisy</h3>
-<audio controls>
-  <source src="Audio/sample27003NOISY.wav" type="audio/wav">
-</audio>
-
-<h3>Sample 6032 – Noisy</h3>
-<audio controls>
-  <source src="Audio/sample6032NOISY.wav" type="audio/wav">
-</audio>
-
-<hr>
-
-<p>
-Clean, baseline, and enhanced samples will be added in the final version.
-</p>
-
+      </tbody>
+    </table>
+  </div>
 </body>
 </html>
